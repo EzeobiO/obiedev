@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Dark mode: applies when .dark is on <html> or any ancestor */
+@variant dark (&:where(.dark, .dark *));
+
+/* Base CSS variables — light mode */
+:root {
+  --background: #FAFAF8;
+  --foreground: #0A0A0A;
+  --muted-foreground: #6B6B6B;
+  --border: #E5E5E5;
+  --card: #FFFFFF;
+  --accent: #2563EB;
+  --image-placeholder: #F0F0EE;
+}
+
+/* Base CSS variables — dark mode overrides */
+.dark {
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
+  --muted-foreground: #A1A1A1;
+  --border: #262626;
+  --card: #111111;
+  --accent: #2563EB;
+  --image-placeholder: #1A1A1A;
+}
+
+/* Map our tokens into Tailwind utility classes.
+   Tailwind v4 auto-generates bg-*, text-*, border-*, font-* utilities
+   from the variables named with --color-* and --font-* prefixes. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-image-placeholder: var(--image-placeholder);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
