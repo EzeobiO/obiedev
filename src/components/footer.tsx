@@ -16,10 +16,10 @@ export function Footer() {
           </p>
 
           <a
-            href="mailto:hello@example.com"
+            href="mailto:obieksu@gmail.com"
             className="border-b border-border pb-px font-sans text-sm text-foreground transition-colors hover:text-accent"
           >
-            hello@example.com
+            obieksu@gmail.com
           </a>
         </div>
 
@@ -45,7 +45,7 @@ export function Footer() {
         {/* Attribution */}
         <div className="md:text-right">
           <p className="font-mono text-xs leading-[1.8] text-muted-foreground">
-            Built by Your Name
+            Built by Ebube Ezeobi
             <br />
             © {new Date().getFullYear()}
           </p>

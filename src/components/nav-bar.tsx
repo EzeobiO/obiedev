@@ -70,12 +70,12 @@ return (
         )}
     >
         <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 md:px-10 lg:px-20">
-          {/* Wordmark — replace "JD" with your initials */}
+          {/* My initials */}
         <Link
             href="/"
             className="font-mono text-[15px] font-semibold tracking-[0.04em] text-foreground"
         >
-            JD
+            OE
         </Link>
 
           {/* Desktop nav */}
