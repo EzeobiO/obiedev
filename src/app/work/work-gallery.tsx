@@ -126,26 +126,26 @@ return (
 
         {/* Sort dropdown */}
         <div ref={dropdownRef} className="relative">
-          <button
+        <button
             type="button"
             onClick={() => setSortOpen((o) => !o)}
             className="flex items-center gap-2 whitespace-nowrap rounded-md border border-border bg-transparent px-3.5 py-2 font-mono text-xs tracking-[0.04em] text-muted-foreground transition-colors hover:text-foreground"
             aria-haspopup="listbox"
             aria-expanded={sortOpen}
-          >
+        >
             {SORT_LABELS[sort]}
             <ChevronDown
-              size={12}
-              className={cn(
+            size={12}
+            className={cn(
                 "transition-transform duration-150",
                 sortOpen && "rotate-180"
-              )}
+            )}
             />
-          </button>
-          {sortOpen && (
+        </button>
+        {sortOpen && (
             <div
-              role="listbox"
-              className="absolute top-full right-0 z-50 mt-1.5 min-w-[160px] overflow-hidden rounded-lg border border-border bg-background shadow-[0_4px_24px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+            role="listbox"
+            className="absolute top-full left-0 md:right-0 md:left-auto z-50 mt-1.5 min-w-[160px] overflow-hidden rounded-lg border border-border bg-background shadow-[0_4px_24px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
             >
             {SORT_OPTIONS.map((opt) => {
                 const active = opt === sort;
