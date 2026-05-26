@@ -103,21 +103,27 @@ return (
         </nav>
 
           {/* Mobile controls */}
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
             <button
+            type="button"
             onClick={toggleTheme}
-            className="p-2 text-muted-foreground"
+            className="relative z-10 flex h-11 w-11 items-center justify-center rounded-md text-foreground active:bg-border/40"
             aria-label="Toggle theme"
             >
             {mounted ? (
-                isDark ? <Sun size={16} /> : <Moon size={16} />
+                isDark ? (
+                <Sun size={20} strokeWidth={1.75} />
+                ) : (
+                <Moon size={20} strokeWidth={1.75} />
+                )
             ) : (
-                <div className="h-4 w-4" />
+                <div className="h-5 w-5" />
             )}
             </button>
             <button
+            type="button"
             onClick={() => setMenuOpen((o) => !o)}
-            className="p-2 text-foreground"
+            className="relative z-10 flex h-11 w-11 items-center justify-center rounded-md text-foreground active:bg-border/40"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
